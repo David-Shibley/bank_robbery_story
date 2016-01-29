@@ -7,7 +7,7 @@ app.config(function($routeProvider, $locationProvider) {
   }).when('/game', {
     templateUrl: 'partials/game.html',
     controller: 'gameController'
-  }).when('/win', {
+  }).when('/supersecretroutedontlookatthisurlmwahahahaha', {
     templateUrl: 'partials/win.html',
     controller: 'winController'
   }).otherwise('/');

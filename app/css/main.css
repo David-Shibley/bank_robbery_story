@@ -1,1 +1,17 @@
 /* add custom styles */
+.logo {
+  width: 100px;
+}
+
+.breadcrumb {
+  margin-top: 20px;
+}
+
+.jumbotron {
+  display: flex;
+  flex-direction: column;
+}
+
+.jumbotron > * {
+  align-self: center;
+}
