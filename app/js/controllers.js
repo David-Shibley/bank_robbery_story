@@ -6,6 +6,8 @@ app.controller('winController', function($scope, $http){
     $scope.winData = data.data;
     $scope.winnings = data.data.secretData;
     $scope.bags = Math.round(data.data.secretData/1000000);
+    $scope.men = Math.round(Math.round(data.data.secretData/1000000)/10);
+    $scope.vans = Math.round(Math.round(data.data.secretData/1000000)/10)/4;
   });
 });
 

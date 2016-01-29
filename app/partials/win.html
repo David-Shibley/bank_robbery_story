@@ -22,10 +22,17 @@
     <p>That is {{bags | number: 0}} bags of money</p>
     <img src="money-stacks-duffle-bag.jpeg" alt=""/>
     <span>x ({{bags | number: 0}})
+    <p>You will have needed {{men | number: 0}} men with carts</p>
+    <p ng-show="vans >= 2">You will have needed {{vans | number: 0}} drivers with vans to get out of here</p>
+    <p ng-show="vans == 1">You will have needed {{vans | number: 0}} driver with a van to get out of here</p>
   </div>
   <div class="win">
     <p>Coincidentally the president ate {{winnings | number}} waffles this morning.</p>
     <p>That is {{winnings | number}} photo ops:</p>
     <img src="waffles.jpeg" alt="president obama eats waffles" />
+    <p>He used {{bags | number: 0}} bags of pancake mix</p>
+    <p>He needed {{men | number: 0}} men help him carry the pancake mix</p>
+    <p ng-show="vans >= 2">He needed {{vans | number: 0}} drivers with vans to get out of here</p>
+    <p ng-show="vans == 1">He needed {{vans | number: 0}} driver with a van to get the pancake mix to him</p>
   </div>
 </div>
