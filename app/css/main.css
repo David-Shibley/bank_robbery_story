@@ -7,11 +7,29 @@
   margin-top: 20px;
 }
 
-.jumbotron {
+.main {
   display: flex;
   flex-direction: column;
+  align-content: center;
+  height: 70vh;
+}
+.main > * {
+  align-self: center;
 }
 
-.jumbotron > * {
-  align-self: center;
+body {
+  display: block;
+  position: relative;
+}
+
+body::after {
+  content: "";
+  background: url(../background.jpg) no-repeat;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
