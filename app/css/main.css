@@ -41,7 +41,7 @@
   font-size: 20px;
 }
 
-div > img {
+.circle {
   border-radius: 50%;
   height: 200px;
 }
@@ -96,4 +96,8 @@ body::after {
 
 .mainGame div {
   margin: auto;
+}
+
+label {
+display: block;
 }

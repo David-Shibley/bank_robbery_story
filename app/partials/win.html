@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand navbar-left" href="#">
-        <img alt="Brand" class="logo" src="logo.jpg">
+        <img alt="Brand" class="logo class" src="logo.jpg">
       </a>
       <div class="navbar-right">
         <h1 class="money">RobberMe This</h1>
@@ -20,12 +20,12 @@
   <div class="win">
     <p>You managed to walk away with <span>{{winnings | currency}}</span></p>
     <p>That is {{bags | number: 0}} bags of money</p>
-    <img src="money-stacks-duffle-bag.jpeg" alt=""/>
+    <img src="money-stacks-duffle-bag.jpeg" alt="" class="circle"/>
     <span>x ({{bags | number: 0}})
   </div>
   <div class="win">
     <p>Coincidentally the president ate {{winnings | number}} waffles this morning.</p>
     <p>That is {{winnings | number}} photo ops:</p>
-    <img src="waffles.jpeg" alt="president obama eats waffles" />
+    <img src="waffles.jpeg" alt="president obama eats waffles" class="circle"/>
   </div>
 </div>
