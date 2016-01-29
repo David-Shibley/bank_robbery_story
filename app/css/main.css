@@ -15,10 +15,25 @@
 }
 .main > * {
   align-self: center;
+  padding: 20px;
+}
+
+.main > h2 {
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.main > p {
+  font-size: 20px;
+}
+
+h1 {
+  margin-top: 0;
 }
 
 body {
   display: block;
+  height: 100vh;
   position: relative;
 }
 
@@ -32,4 +47,13 @@ body::after {
   right: 0;
   position: absolute;
   z-index: -1;
+}
+
+.money {
+  font-family: "moneyFont", Verdana, Tahoma;
+}
+
+@font-face {
+    font-family: "moneyFont";
+    src: url(../FiveDollar.ttf) format("truetype");
 }
