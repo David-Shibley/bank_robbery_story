@@ -62,7 +62,8 @@
             <h3>Ew. That's cannibalism.</h3>
           </div>
         </div>
-        <div ng-show="q2 == 'a byte'">
+      </div>
+        <div ng-show="q2.toLowerCase()=='a byte'">
           <label for="q3">How much wood can a woodchuck chuck?</label>
           <input type="text" name="q3" ng-model="q3">
           <h3 ng-show="q3=='a woodchuck could chuck all the wood it would chuck if a woodchuck would chuck wood'">Wow. Seriously?</h3>
@@ -104,7 +105,7 @@
                       <input type="text" name="q9" ng-model="q9">
 
                       <div ng-show="q9 == 'Jake The Dog'">
-                        <label for="q10">Ma-ia HII... Ma-ia HUU... Mai-ia HOO</label>
+                        <label for="q10">Ma-ia HII... Ma-ia HUU... Ma-ia HOO</label>
                         <input type="text" name="q10" ng-model="q10">
 
                         <div ng-show="q10 == 'Ma-ia HAHA'">
