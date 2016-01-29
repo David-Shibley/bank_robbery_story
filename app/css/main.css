@@ -15,3 +15,7 @@
 .jumbotron > * {
   align-self: center;
 }
+
+.mainGame div {
+  margin: auto;
+}

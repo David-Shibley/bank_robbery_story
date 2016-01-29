@@ -1,9 +1,33 @@
 <div ng-controller="gameController" ng-model="initialText">
   <h1>Bank heist</h1>
   <br>
-  <p>You are an ambitious bank rober that has attempted to crack the most secure bank safe in the world. Little did you know the safe was attached to a mysterious computer with just a a single question and a blank input space. It's up to you to figure out how to crack this unexpected challenge. Will you get you moeny? Or head home without a dollar to show for?</p>
+  <p>You are an ambitious bank robber that has attempted to crack the most secure bank safe in the world. Little did you know the safe was attached to a mysterious computer with just a single question and a blank input space. It's up to you to figure out how to crack this unexpected challenge. Will you get the money? Or head home without a dollar to show for?</p>
   <label for="q1">What is the meaning of life?</label>
-  <input type="text" ng-model="q1">
+  <input type="text" ng-model="q1" name="q1">
+  <h3 ng-show="q1=='love'">I mean, I won't judge your lifestyle choices.</h3>
+  <h3 ng-show="q1=='cheezburger'">You can haz cheezburger.</h3>
+  <div ng-show="q1==41">
+    <label for="q1q1">How many stooges were there?</label>
+    <input type="text" name="q1q1" ng-model="q1q1" />
+    <div ng-show="q1q1=='2' || q1q1=='two'">
+      <label for="q1q2">How many states are there?</label>
+      <input type="text" name="q1q2" ng-model="q1q2" />
+      <div ng-show="q1q2=='49'">
+        <h3>You realize you're off by one right? +1 to Slytherin.</h3>
+      </div>
+    </div>
+  </div>
+  <div ng-show="q1==43">
+    <label for="q1q1">How many stooges were there?</label>
+    <input type="text" name="q1q1" ng-model="q1q1" />
+    <div ng-show="q1q1=='4' || q1q1=='four'">
+      <label for="q1q2">How many states are there?</label>
+      <input type="text" name="q1q2" ng-model="q1q2" />
+      <div ng-show="q1q2=='51'">
+        <h3>You realize you're off by one right? -1 to Gryffindor.</h3>
+      </div>
+    </div>
+  </div>
   <div ng-show="q1 == 42">
     <label for="q2">How much do I eat for breakfast?</label>
     <input type="text" name="q2" ng-model="q2">
@@ -11,19 +35,38 @@
     <h3 ng-show="q2 == 'a lot'">Great. Now I feel sluggish.</h3>
     <h3 ng-show="q2 == 'a little'">But, I'm still hungry.</h3>
 
+    <div ng-show="q2=='a complete one'">
+      <label for="q2q1">What does that even mean?</label>
+      <input type="text" name="q2q1" ng-model="q2q1" />
+      <div ng-show="q2q1=='idk'">
+        <label for="q2q2">Wait, what does complete mean to you?</label>
+        <input type="text" name="q2q2" ng-model="q2q2" />
+        <div ng-show="q2q2=='my family'">
+          <h3>Ew. That's cannibalism.</h3>
+        </div>
+      </div>
+    </div>
+
     <div ng-show="q2 == 'a byte'">
       <label for="q3">How much wood can a woodchuck chuck?</label>
       <input type="text" name="q3" ng-model="q3">
+      <h3 ng-show="q3=='a woodchuck could chuck all the wood it would chuck if a woodchuck would chuck wood'">Wow. Seriously?</h3>
 
       <div ng-show="q3 == 'a woodchuck would chuck all the wood it could chuck if a woodchuck could chuck wood'">
         <label for="q4">You come to a fork in the road. Do you take the left path or the right path?</label>
         <input type="text" name="q4" ng-model="q4">
-        <label for="leftpath" ng-show="q4 =='left path'">Well, now what?</label>
-        <input name="leftpath" ng-show="q4 =='left path'"/>
+        <label for="leftpath" ng-show="q4 =='left path'">Trogdor the Burninator appears. What do you do?</label>
+        <input name="leftpath" ng-show="q4 =='left path'" ng-model="q4q1"/>
+          <h3 ng-show="q4q1=='cower in fear'">Trodgor doesn't take kindly to weakness. He burninates you.</h3>
+          <h3 ng-show="q4q1='battle'">Trodgor doesn't take kindly to aggression. He burninates you.</h3>
+          <h3 ng-show="q4q1='buy him a beer'">Trodgor doesn't take kindly to drinking. He burninates you.</h3>
+          <h3 ng-show="q4q1='kick him in nuts'">Trodgor doesn't take kindly to nut-kicking. He burninates you.</h3>
+          <h3 ng-show="q4q1='use magic'">Trodgor doesn't take kindly to magicking. He burninates you.</h3>
+          <h3 ng-show="q4q1='declare peace'">Trodgor doesn't take kindly to declaring. He burninates you.</h3>
+
         <label for="rightpath" ng-show="q4 =='right path'">What it is, fool?</label>
         <input name="rightpath" ng-show="q4 =='right path'"/>
         <h3 ng-show="q4=='I took the one less traveled by'">Ain't no one got time for poetry!</h3>
-
         <div ng-show="q4 == 'I make my own path'">
           <label for="q5">What... is the air-speed velocity of an unladen swallow?</label>
           <input type="text" name="q5" ng-model="q5">
@@ -31,27 +74,29 @@
           <div ng-show="q5 == 'African or European?'">
             <label for="q6">Break it down:</label>
             <input type="text" name="q6" ng-model="q6">
+            <iframe ng-show="q6 == 'Rick Roll'" width="420" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
 
             <div ng-show="q6 == 'Stop! Hammer time!'">
-              <label for="q7">That's not a knife, <strong>this</strong> is a knife!</label>
+              <label for="q7">That's not a knife, <em>this</em> is a knife!</label>
               <input type="text" name="q7" ng-model="q7">
 
               <div ng-show="q7 == 'a knife'">
-                <label for="q8">Aww man. I just lost:</label>
+                <label for="q8">Candy mountain Charlie!</label>
                 <input type="text" name="q8" ng-model="q8">
 
-                <div ng-show="q8 == 'the game'">
+                <div ng-show="q8 == 'Ahh they got my kidney' || q8=='shun the nonbeliever'">
                   <label for="q9">Sucking at something is the first step to becoming sorta good at something. -</label>
                   <input type="text" name="q9" ng-model="q9">
 
                   <div ng-show="q9 == 'Jake The Dog'">
-                    <label for="q10"></label>
+                    <label for="q10">Ma-ia HII... Ma-ia HUU... Mai-ia HOO</label>
                     <input type="text" name="q10" ng-model="q10">
 
-                    <div ng-show="q10 == 'hello'">
-                      <label for="q11"></label>
+                    <div ng-show="q10 == 'Ma-ia HAHA'">
+                      <label for="q11">Don't _____ me bro!</label>
                       <input type="text" name="q11" ng-model="q11">
-                      <div ng-show="q11 == 'hello'">
+
+                      <div ng-show="q11 == 'tase'">
                         <h2>ACCESS GRANTED</h2>
                         <a href="#/supersecretroutedontlookatthisurlmwahahahaha">Click to download the secret data.</a>
                       </div>
