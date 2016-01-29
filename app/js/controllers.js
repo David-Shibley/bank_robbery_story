@@ -5,6 +5,7 @@ app.controller('winController', function($scope, $http){
   $http.get('https://secret12.herokuapp.com/secretinfo').then(function(data){
     $scope.winData = data.data;
     $scope.winnings = data.data.secretData;
+    $scope.bags = Math.round(data.data.secretData/1000000);
   });
 });
 
